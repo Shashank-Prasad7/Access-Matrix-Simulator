@@ -5,7 +5,7 @@ class AccessMatrixApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Access Matrix Simulator")
-        self.root.geometry("950x650")
+        self.root.geometry("950x700")
         self.root.configure(bg="#121212")
 
         # Style Setup
@@ -16,8 +16,13 @@ class AccessMatrixApp:
         style.configure("TEntry", font=("Segoe UI", 10))
         style.configure("TCombobox", padding=5, font=("Segoe UI", 10))
 
+        # Title
         title = tk.Label(root, text="Access Matrix Simulation", bg="#121212", fg="#00FFC6", font=("Segoe UI", 20, "bold"))
-        title.pack(pady=20)
+        title.pack(pady=15)
+
+        # Author credit
+        author = tk.Label(root, text="Developed by Shashank", bg="#121212", fg="#FFD369", font=("Segoe UI", 11, "italic"))
+        author.pack(pady=(0, 15))
 
         self.create_input_frame()
 
